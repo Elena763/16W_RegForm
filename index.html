@@ -17,10 +17,10 @@
         <h2>Форма регистрации.</h2>
         <form id="form" class="form" novalidate>
             <input id="name" class="name" type="text" placeholder="Введите имя" required minlength="2" maxlength="20">
-            <span class="error-message" id="name"></span>
+            <span class="error-message" id="name-error"></span>
             <input id="email" class="email"  type="email" placeholder="Введите электронную почту" required>
             <span class="error-message" id="email-error"></span>
-            <input id="age" class="age"  type="number" placeholder="Введите возраст" required>
+            <input id="age" class="age"  type="number" min=18 max=100 placeholder="Введите возраст" required>
             <span class="error-message" id="age-error"></span>
             <div id="choicesex" class="choice_sex">
                 <p>Выберите пол:</p>
@@ -48,9 +48,9 @@
             <div id="agreement" class="agreement">
                 <input id="agree" class="agree" name="checkbox" type="checkbox" required>
                 <label for="agree">Я согласен с обработкой персональных данных</label>
-                <span class="error-message" id="agree-error"></span>
+                <span class="error-message" id="error"></span>
             </div>
-            <button id="button">Зарегистрироваться</button>
+            <button id="button" onclick=checkAll()>Зарегистрироваться</button>
         </form>
     </div>
     <script src="script.js"></script>
