@@ -16,10 +16,10 @@
     <div class="container" id="container">
         <h2>Форма регистрации.</h2>
         <form id="form" class="form" novalidate>
-            <input id="name" class="name" type="text" placeholder="Введите имя" required minlength="2" maxlength="20">
+            <input id="name" class="name" type="text" placeholder="Введите имя" required minlength="2" maxlength="20" pattern="^[a-zA-Za-яА-Я ]{2,20}$">
             <span class="error-message" id="name-error"></span>
             <input id="email" class="email"  type="email" placeholder="Введите электронную почту" required>
-            <span class="error-message" id="email-error"></span>
+            <span class="error-message" id="emailerror"></span>
             <input id="age" class="age"  type="number" min=18 max=100 placeholder="Введите возраст" required>
             <span class="error-message" id="age-error"></span>
             <div id="choicesex" class="choice_sex">
@@ -41,15 +41,15 @@
                 <option value="">Другое</option>
             </select>
             <span class="error-message" id="profession-error"></span>
-            <input id="password" class="password"  type="text" placeholder="Введите пароль" required minlength="8" pattern="">
+            <input id="password" class="password"  type="text" placeholder="Введите пароль" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$">
             <span class="error-message" id="password-error"></span>
-            <input id="repassword" class="password"  type="text" placeholder="Повторите пароль" required minlength="8" pattern="">
+            <input id="repassword" class="password"  type="text" placeholder="Повторите пароль" required minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$">
             <span class="error-message" id="repassword-error"></span>
             <div id="agreement" class="agreement">
                 <input id="agree" class="agree" name="checkbox" type="checkbox" required>
                 <label for="agree">Я согласен с обработкой персональных данных</label>
-                <span class="error-message" id="error"></span>
             </div>
+            <span class="error-message" id="agree-error"></span>
             <button id="button" onclick=checkAll()>Зарегистрироваться</button>
         </form>
     </div>

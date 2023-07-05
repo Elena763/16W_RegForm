@@ -42,3 +42,7 @@ button{
     margin-top: 10px;
     margin: 0 auto;
 }
+.error{
+    border: 1px dashed red;
+    color: brown;
+}
