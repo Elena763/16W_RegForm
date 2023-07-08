@@ -1,5 +1,5 @@
 let button = document.getElementById("button");
-
+//Задаем переменные
 const username = document.getElementById("name");
 let userError = document.getElementById("name-error");
 const mail = document.getElementById("email");
@@ -14,7 +14,7 @@ const rePassword = document.getElementById("repassword");
 let repasswordError = document.getElementById("repassword-error");
 const agree = document.getElementById("agree");
 let agreeError = document.getElementById("agree-error");
-
+//Функция валидации
 username.addEventListener("input", function () {
     if (username.validity.patternMismatch ){
         userError.textContent = "Неверный формат заполнения имени";
@@ -64,7 +64,7 @@ rePassword.addEventListener("input", function () {
         repasswordError.textContent = "";
         rePassword.classList.remove('error');
     } else{
-        repasswordError.textContent = "Нет совпадения с паролем. Проверьте правильнось написания";
+        repasswordError.textContent = "Нет совпадения с паролем. Проверьте правильность написания";
         rePassword.classList.add('error');
     }
 });
